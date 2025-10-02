@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #4c1d95, #111827, #000);
+      background-size: 300% 300%;
+      animation: gradient 12s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      width: 380px;
+      padding: 2rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      color: white;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+      color: #e5e7eb;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #4b5563;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      outline: none;
+      transition: border 0.2s ease;
+    }
+
+    input:focus {
+      border: 1px solid #a855f7;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #7c3aed;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: #6d28d9;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .register a {
+      color: #a78bfa;
+      text-decoration: none;
+    }
+
+    .register a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Welcome Back 👋</h2>
+    <p>Sign in to continue your journey</p>
+    <form>
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" required>
+
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" required>
+
+      <button type="submit">🔑 Sign In</button>
+    </form>
+    <div class="register">
+      Don’t have an account? <a href="#">Register</a>
+    </div>
+  </div>
+</body>
+</html>
